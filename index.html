@@ -20,7 +20,7 @@
     </header>
     <main>
       <section class="infor">
-        <div class="boas-vindas">
+        <div class="boas-vindas headline">
           <h2>Transforme seu Jardim com Profissionais Especializados!</h2>
           <h3>
             Oferecemos serviços completos de jardinagem para deixar seu espaço
@@ -28,28 +28,28 @@
           </h3>
         </div>
         <div class="servicos">
-          <div class="dvs-imgs">
+          <div class="dvs-imgs headline">
             <img src="imgs/podaArbusto.jpg" alt="" />
             <p>
               <strong>Podas:</strong><br />Mantenha suas plantas saudáveis e
               bonitas com podas eficientes.
             </p>
           </div>
-          <div class="dvs-imgs dvs-imgs-right">
+          <div class="dvs-imgs dvs-imgs-right headline">
             <img src="imgs/cortadorGrama.jpg" alt="" />
             <p>
               <strong>Corte de Grama:</strong><br />
               Grama sempre bem aparada e saudável para um jardim perfeito.
             </p>
           </div>
-          <div class="dvs-imgs">
+          <div class="dvs-imgs headline">
             <img src="imgs/plantioGrama.jpg" alt="" />
             <p>
               <strong>Plantio em Geral:</strong><br />Desde flores a árvores,
               cuidamos do plantio de maneira personalizada.
             </p>
           </div>
-          <div class="dvs-imgs dvs-imgs-right">
+          <div class="dvs-imgs dvs-imgs-right headline">
             <img src="imgs/manuten.jpg" alt="" />
             <p>
               <strong>Manutenção e Limpeza: </strong><br />Jardim limpo e bem
@@ -61,11 +61,21 @@
     </main>
     <footer>
       <h2>Entre em contato:</h2>
-      <div class="contato">
+      <div class="contato headline">
         <a href="#"><img src="imgs/whatsIcon.png" id="whats" /></a>
         <a href="#"><img src="imgs/instaIcon.png" id="insta" /></a>
       </div>
     </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script>
+      ScrollReveal().reveal('.headline');
+    </script>
+    <script>
+      (function () {
+          const locomotiveScroll = new LocomotiveScroll();
+      })();
+  </script>
   </body>
 </html>
 

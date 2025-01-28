@@ -15,6 +15,7 @@
 }
 body,html{
     background-color: black;
+    scroll-behavior: auto;
 }
 h1{
     font-family: "elegant";
