@@ -1,10 +1,25 @@
+@font-face {
+    font-family: "elegant";
+    src: url(fonts/ELEGN___.TTF) format(TrueType);
+}
+@font-face {
+    font-family: "plant";
+    src: url(fonts/Plantation.otf) format(OpenType);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 500ms;
 }
 body,html{
     background-color: black;
+}
+h1{
+    font-family: "elegant";
+}
+h2,h3,p{
+    font-family: "cinzel",sans-serif,serif;
 }
 header{
     width: 100%;
@@ -20,7 +35,7 @@ header{
     & > .name{
         width: 100%;
         height: auto;
-        background-color: rgba(0, 0, 0, 0.336);
+        background-color: rgba(0, 0, 0, 0.342);
         display: flex;
         align-items: center;
         justify-content: start;
@@ -37,5 +52,171 @@ header{
 main{
     width: 100%;
     height: auto;
-    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+
+    & > .infor{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & > .boas-vindas{
+            width: 100%;
+            height: 300px;
+            background-color: rgba(14, 96, 116, 0);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 5px;
+
+            & > h2{
+                font-size: 30px;
+                color: white;
+            }
+            & > h3{
+                font-size: 20px;
+                color: white;
+            }
+        }
+        & > .servicos{
+            width: 100%;
+            height: auto;
+            background-color: rgba(1, 103, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px 0;
+
+            & > .dvs-imgs{
+                width: 100%;
+                height: 300px;
+                background-color: rgba(0, 128, 0, 0);
+                margin: 50px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 0 10px rgb(48, 48, 48);
+                border-radius: 20px 2px 2px 20px;
+                padding: 0 10px 0 0;
+                &>p{
+                    font-size: 20px;
+                    color: white;
+                }
+                
+                & > img{
+                    width: 400px;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    transition: 250ms;
+                    margin-right: 10px;
+}
+                & > img:hover{
+                    transform: scale(1.1);
+                    
+}
+            }
+            & > .dvs-imgs-right{
+                border-radius: 2px 20px 20px 2px;
+                flex-direction: row-reverse;
+                padding:0 0 0 10px;
+}
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    & > h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    & > .contato{
+        width: 80%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & > a > img#whats{
+            width: 84px;
+            transition: 250ms;
+}
+        & > a > img#insta{
+            width: 100px;
+            transition: 250ms;
+}
+        & > a > img#insta:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgb(255, 0, 157));
+
+        }
+        & > a > img#whats:hover{
+            filter: drop-shadow(0 0 10px rgb(51, 255, 0));
+            cursor: pointer;
+            transform: scale(1.1);
+
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    main{
+        width: 100%;
+        & > .infor{
+            width: 100%;
+        }
+        .infor>.servicos>.dvs-imgs{
+            width: 100%;
+            box-shadow: 0 0 0 black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 !important;
+            border-radius: 20px !important;
+            &>img{
+                margin: 0 !important;
+                width: 100% !important;
+                filter: blur(0px);
+            }
+            & > img:hover{
+                filter: blur(2px);
+                transform: none;
+}
+            & > p{
+                position: relative;
+                top: -200px;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.438);
+            }
+        }
+        .infor>.servicos>.dvs-imgs-right{
+            width: 100%;
+            box-shadow: 0 0 0 black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 ;
+            border-radius: 20px ;
+        }
+    }
 }
